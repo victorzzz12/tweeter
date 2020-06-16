@@ -1,0 +1,22 @@
+button {
+  background-color: #4056A1;
+  color: white;
+  font-family: 'Bungee', sans-serif;
+}
+
+main label {
+  font-weight: 600;
+  margin-bottom: 5em;
+}
+
+main output {
+  font-weight: 600;
+}
+
+.container section form div{
+  display: flex;
+  justify-content: space-between;
+  border-top: 5px solid red;
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+}
