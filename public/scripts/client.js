@@ -9,7 +9,7 @@ const createTweetElement = (i) => {
   </div>
   <div><p>${i.content.text}</p></div>
   <div class="footer">
-    <h6>${(new Date() - i.created_at)/1000/60/60/24/365}</h6>
+    <h6>${moment(i.created_at, '').fromNow()}</h6>
     <div>
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
@@ -21,35 +21,40 @@ const createTweetElement = (i) => {
   return tweet;
 }
 
+
 const renderTweets = tweets => {
   for (let i of tweets) {
-    console.log(i)
-    $("#tweet-container").append(createTweetElement(i));
-    
+    $("#tweet-container").prepend(createTweetElement(i));
   }
 }
 
 $(document).ready(() => {
-  console.log("ready!");
-  $("form").on("submit", (event) => {
-      event.preventDefault();
-      console.log("Working");
-      $.ajax({
-          url: "/tweets/",
-          method: "POST",
-          data: $("form").serialize()
-      })
-      .done(() => {
-          $("#tweet-container").empty()
-          loadTweets();
-        });
-  })
   function loadTweets() {
     $.ajax("/tweets/", { method: "GET" })
     .then((data) => {
       renderTweets(data);
     })
   }
+  loadTweets();
+  $("form").on("submit", (event) => {
+    event.preventDefault();
+    if ($("form").serialize() === "text=") {
+      alert("Tweet cannot be empty!");
 
-loadTweets();
+    } else if ($("form").serialize().length - 5 > 140) {
+      alert("Tweet must be within 140 characters!");
+
+    } else {
+      $.ajax({
+          url: "/tweets/",
+          method: "POST",
+          data: $("form").serialize()
+      })
+      .done(() => {
+          $("#tweet-container").empty();
+          loadTweets();
+          $("textarea").val("").focus();
+      });
+    }
+  })
 })

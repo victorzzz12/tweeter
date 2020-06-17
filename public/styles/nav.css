@@ -9,6 +9,21 @@ nav {
   top: 0;
 }
 
+nav i {
+  color: red;
+  animation: MoveUpDown 2s linear infinite;
+  position: absolute;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0.5em;
+  }
+  50% {
+    bottom: 1em;
+  }
+}
+
 nav span {
   font-family: "Bungee", sans-serif;
   font-size: 1.5em;
@@ -38,3 +53,4 @@ nav div h4 {
     margin-bottom: 0px;
     padding-bottom: 0.3em;
 }
+

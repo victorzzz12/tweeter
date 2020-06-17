@@ -4,6 +4,10 @@ button {
   font-family: 'Bungee', sans-serif;
 }
 
+button:hover {
+  border: 2px solid aqua;
+}
+
 main label {
   font-weight: 600;
   margin-bottom: 5em;
@@ -86,4 +90,14 @@ article p {
   padding-bottom: 1.5em;
   font-weight: 600;
   word-wrap: break-word;
+}
+
+article i {
+  color: darkblue;
+  font-size: 0.5em;
+  padding-left: 0.5em;
+}
+
+.tag {
+  color: lightskyblue;
 }
