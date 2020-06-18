@@ -35,3 +35,21 @@ body {
 .container {
   width: 90%;
  }
+
+@media screen and (min-width: 950px) {
+  body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .container {
+    margin-top: 5em;
+  }
+  .new-tweet {
+    margin-right: 1em;
+  }
+  #tweet-container {
+    margin-right: 1em;
+    margin-top: 30px;
+  }
+
+} 

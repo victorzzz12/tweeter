@@ -41,16 +41,19 @@ main output {
   outline: none;
 }
 
+.new-tweet {
+  margin-bottom: 2em;
+}
+
 article {
   border: 4px solid black;
-  margin: 0 10%;
-  margin-top: 2.5%;
+  margin: 2.5% 0;
   display: flex;
   flex-direction: column;
   opacity: 50%;
 }
 
-article .header {
+article .tweet-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,12 +61,12 @@ article .header {
   margin-right: 0.5em;
 }
 
-article .header span {
+article .tweet-header span {
   display: flex;
   align-items: center;
 }
 
-article .header img {
+article .tweet-header img {
   width: 60px;
   padding-right: 1em;
 }
@@ -96,6 +99,11 @@ article i {
   color: darkblue;
   font-size: 0.5em;
   padding-left: 0.5em;
+  opacity: 50%;
+}
+
+article i:hover {
+  opacity: 100%;
 }
 
 .tag {
@@ -109,4 +117,16 @@ article i {
 .err p {
   border: 2px dashed red;
   padding: 0.5em;
+}
+
+@media screen and (max-width: 490px) {
+  .tweet-header {
+    flex-direction: column;
+  }
+  .tag {
+    margin-top: 0;
+  }
+  article p {
+    text-align: center;
+  }
 }

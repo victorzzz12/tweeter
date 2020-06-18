@@ -7,7 +7,7 @@ const escape =  function(str) {
 const createTweetElement = (i) => {
   const tweet = 
   `<article>
-  <div class="header">
+  <div class="tweet-header">
     <span>
       <img src="${i.user.avatars}" alt="This is a profile image"><h4>${escape(i.user.name)}</h4>
     </span>
@@ -37,6 +37,7 @@ const renderTweets = tweets => {
 $(document).ready(() => {
   $(".err").hide();
   $(".new-tweet").hide();
+  
   function loadTweets() {
     $.ajax("/tweets/", { method: "GET" })
     .then((data) => {
@@ -49,10 +50,16 @@ $(document).ready(() => {
     if ($("form").serialize() === "text=") {
       $("#err2").hide();
       $("#err1").slideDown(200);
+      setTimeout(() => {
+        $("#err1").slideUp(500);
+      }, 3000);
 
     } else if ($("form").serialize().length - 5 > 140) {
       $("#err1").hide();
       $("#err2").slideDown(200);
+      setTimeout(() => {
+        $("#err2").slideUp(500);
+      }, 3000);
 
     } else {
       $.ajax({
@@ -66,6 +73,7 @@ $(document).ready(() => {
           $("textarea").val("").focus();
           $(".err").hide();
       });
+      $(".new-tweet form output.counter").text(140);
     }
   })
   $("nav div i").on("click", () => {
@@ -76,5 +84,5 @@ $(document).ready(() => {
       $(".new-tweet").slideDown(200);
       $("textarea").val("").focus();
     }
-  })
-})
+  });
+});
