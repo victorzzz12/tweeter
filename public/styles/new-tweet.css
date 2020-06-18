@@ -101,3 +101,12 @@ article i {
 .tag {
   color: lightskyblue;
 }
+
+.err {
+  color: red;
+}
+
+.err p {
+  border: 2px dashed red;
+  padding: 0.5em;
+}

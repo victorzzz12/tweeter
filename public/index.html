@@ -40,6 +40,13 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <span id="err1" class="err">
+          <p>Error! Tweet cannot be empty! <i
+              class="fas fa-exclamation-triangle"></i></p>
+        </span>
+        <span id="err2" class="err">
+          <p>Error! Tweet must be within 140 characters! <i class="fas fa-exclamation-triangle"></i></p>
+        </span>
         <h2>Compose Tweet</h2>
         <form>
           <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>

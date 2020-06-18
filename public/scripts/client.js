@@ -1,13 +1,19 @@
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const createTweetElement = (i) => {
   const tweet = 
   `<article>
   <div class="header">
     <span>
-      <img src="${i.user.avatars}" alt="This is a profile image"><h4>${i.user.name}</h4>
+      <img src="${i.user.avatars}" alt="This is a profile image"><h4>${escape(i.user.name)}</h4>
     </span>
-    <h4 class="tag">${i.user.handle}</h4>
+    <h4 class="tag">${escape(i.user.handle)}</h4>
   </div>
-  <div><p>${i.content.text}</p></div>
+  <div><p>${escape(i.content.text)}</p></div>
   <div class="footer">
     <h6>${moment(i.created_at, '').fromNow()}</h6>
     <div>
@@ -29,6 +35,7 @@ const renderTweets = tweets => {
 }
 
 $(document).ready(() => {
+  $(".err").hide();
   function loadTweets() {
     $.ajax("/tweets/", { method: "GET" })
     .then((data) => {
@@ -39,10 +46,12 @@ $(document).ready(() => {
   $("form").on("submit", (event) => {
     event.preventDefault();
     if ($("form").serialize() === "text=") {
-      alert("Tweet cannot be empty!");
+      $("#err2").hide();
+      $("#err1").slideDown(200);
 
     } else if ($("form").serialize().length - 5 > 140) {
-      alert("Tweet must be within 140 characters!");
+      $("#err1").hide();
+      $("#err2").slideDown(200);
 
     } else {
       $.ajax({
@@ -54,6 +63,7 @@ $(document).ready(() => {
           $("#tweet-container").empty();
           loadTweets();
           $("textarea").val("").focus();
+          $(".err").hide();
       });
     }
   })
