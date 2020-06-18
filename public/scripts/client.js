@@ -36,6 +36,7 @@ const renderTweets = tweets => {
 
 $(document).ready(() => {
   $(".err").hide();
+  $(".new-tweet").hide();
   function loadTweets() {
     $.ajax("/tweets/", { method: "GET" })
     .then((data) => {
@@ -65,6 +66,15 @@ $(document).ready(() => {
           $("textarea").val("").focus();
           $(".err").hide();
       });
+    }
+  })
+  $("nav div i").on("click", () => {
+    if ($("form").is(":visible")) {
+      $(".new-tweet").slideUp(200);
+    }
+    else {
+      $(".new-tweet").slideDown(200);
+      $("textarea").val("").focus();
     }
   })
 })
