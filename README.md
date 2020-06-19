@@ -6,8 +6,13 @@ The clone is a responsive design with three different appearances based on the w
 
 ## Screenshots
 
+Full-View
 !["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Full-view.png)
+
+Medium-View
 !["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Medium-view.png)
+
+Smartphone-View
 !["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Small-view.png)
 
 
@@ -18,4 +23,9 @@ The clone is a responsive design with three different appearances based on the w
 - Express
 - md5
 - Node 5.10.x or above
-- nodemon (dev dependency only)
+- nodemon (dev dependency)
+
+## Getting Started 
+
+- Install all dependencies (using the `npm install` command).
+- Run the tweeter app using the `npm run local` command after installing nodemon.
