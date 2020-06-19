@@ -6,13 +6,18 @@ The clone is a responsive design with three different appearances based on the w
 
 ## Screenshots
 
-Full-View
+### Full-View
+
 !["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Full-view.png)
 
-Medium-View
+
+### Medium-View
+
 !["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Medium-view.png)
 
-Smartphone-View
+
+### Smartphone-View
+
 !["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Small-view.png)
 
 
