@@ -34,10 +34,11 @@ const renderTweets = tweets => {
   }
 }
 
+
+$(".err").hide();
+$(".new-tweet").hide();
+
 $(document).ready(() => {
-  $(".err").hide();
-  $(".new-tweet").hide();
-  
   function loadTweets() {
     $.ajax("/tweets/", { method: "GET" })
     .then((data) => {
@@ -76,7 +77,7 @@ $(document).ready(() => {
       $(".new-tweet form output.counter").text(140);
     }
   })
-  $("nav div i").on("click", () => {
+  $("nav div").on("click", () => {
     if ($("form").is(":visible")) {
       $(".new-tweet").slideUp(200);
     }

@@ -2,6 +2,7 @@ nav {
   height: 120px;
   width: 100%;
   background-color: maroon;
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
   color: white;
   display: flex;
   justify-content: space-between;
@@ -12,7 +13,6 @@ nav {
 nav i {
   color: red;
   animation: MoveUpDown 2s linear infinite;
-  position: absolute;
 }
 
 @keyframes MoveUpDown {
@@ -54,11 +54,12 @@ nav div h4 {
     padding-bottom: 0.3em;
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
   nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: none;
   }
   nav h4 {
     margin-top: 0;

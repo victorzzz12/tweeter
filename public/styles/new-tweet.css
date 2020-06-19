@@ -119,7 +119,7 @@ article i:hover {
   padding: 0.5em;
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
   .tweet-header {
     flex-direction: column;
   }
