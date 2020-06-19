@@ -4,8 +4,6 @@
  * Do not modify these two selectors, please
  */
 
-/* font-family: 'Bungee', cursive;
-font-family: 'Source Sans Pro', sans-serif; */
 
 html {
   box-sizing: border-box;
@@ -27,10 +25,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 .container {
   width: 90%;

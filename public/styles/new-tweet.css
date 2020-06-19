@@ -110,13 +110,10 @@ article i:hover {
   color: lightskyblue;
 }
 
-.err {
-  color: red;
-}
-
 .err p {
   border: 2px dashed red;
   padding: 0.5em;
+  color: red;
 }
 
 @media screen and (max-width: 500px) {
