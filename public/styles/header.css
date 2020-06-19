@@ -1,5 +1,5 @@
 header {
-  height: 500px;
+  height: 350px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,13 +33,14 @@ header img {
     padding-top: 100px;
   }
   nav {
-    background-color: transparent;
-    background-image: none;
+    background-color:orange;
+    background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+    position: relative;
   }
 }
 
 @media screen and (max-width: 500px) {
   header {
-    height: 600px;
+    height: 350px;
   }
 }

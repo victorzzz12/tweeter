@@ -6,7 +6,9 @@ The clone is a responsive design with three different appearances based on the w
 
 ## Screenshots
 
-
+!["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Full-view.png)
+!["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Medium-view.png)
+!["Screenshot of URLs page"](https://github.com/victorzzz12/tweeter/blob/master/docs/Small-view.png)
 
 
 ## Dependencies
