@@ -34,3 +34,4 @@ The clone is a responsive design with three different appearances based on the w
 
 - Install all dependencies (using the `npm install` command).
 - Run the tweeter app using the `npm run local` command after installing nodemon.
+- If nodemon is not installed, use the `node server/index.js` command to start the server.
